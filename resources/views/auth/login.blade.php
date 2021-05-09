@@ -8,9 +8,9 @@
   <div class="row justify-content-center">
     <div class="col-md-12">
       <div class="header">
-        <div class="text-center">
+        {{-- <div class="text-center">
             <img src="{{asset('images/logo/logo.png')}}" alt="AdminLTE Logo" height="90" class="text-center mb-3">
-        </div>
+        </div> --}}
       </div>
     </div>
     <div class="col-lg-4 col-md-4">

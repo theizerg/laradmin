@@ -14,14 +14,8 @@
     <!-- General CSS Files -->
 
      <link rel="stylesheet" href="{{asset('otika/assets/css/app.min.css')}} " />
-     <link rel="stylesheet" href="{{asset('otika/assets/bundles/bootstrap-social/bootstrap-social.css')}} " />
-    <!-- Template CSS -->
-     <link rel="stylesheet" href="{{asset('otika/assets/css/style.css')}} " />
-     <link rel="stylesheet" href="{{asset('otika/assets/css/components.css')}} " />
-    <!-- Custom style CSS -->
-     <link rel="stylesheet" href="{{asset('otika/assets/css/custom.css')}} " />
      <link rel="stylesheet" href="{{asset('css/app.css')}} " />
-    <link rel="stylesheet" href="{{asset('css/system.css')}} " />
+     <link rel="stylesheet" href="{{asset('css/system.css')}} " />
 
 
 </head>
@@ -41,9 +35,15 @@
 
     <!-- General JS Scripts -->
     
-   <script src="{{ asset('otika/assets/js/app.min.js') }}" defer></script>
-   <script src="{{ asset('otika/assets/js/scripts.js') }}" defer></script>
-   <script src="{{ asset('otika/assets/js/custom.js') }}" defer></script>
+   <script src="{{asset('otika/assets/js/app.min.js')}}"></script>
+  <!-- JS Libraies -->
+  <script src="{{asset('js/app.js')}}"></script>
+  <!-- Page Specific JS File -->
+  <script src="{{asset('js/system.js')}}"></script>
+  <!-- Template JS File -->
+  <script src="{{asset('otika/assets/js/scripts.js')}}"></script>
+  <!-- Custom JS File -->
+  <script src="{{asset('otika/assets/js/custom.js')}}"></script>
    @stack('scripts')
    <style>
          #body{

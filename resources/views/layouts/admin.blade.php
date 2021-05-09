@@ -172,7 +172,7 @@
                                 src="{!!asset('otika/assets/img/user.png')!!}" class="user-img-radious-style"> <span
                                 class="d-sm-none d-lg-inline-block"></span></a>
                         <div class="dropdown-menu dropdown-menu-right pullDown">
-                            <div class="dropdown-title">Hello Sarah Smith</div>
+                            <div class="dropdown-title">¡Hola! {{auth()->user()->display_name}} </div>
                             
                             {{--  HACER QUE REDIRECCIONE A LA VISTA DE USUARIO INDIVIDAUL REGISTRADO ACTUALMENTE  --}}
                             <a href="{{url('frontoffice.user.profile')}}" class="dropdown-item has-icon"> <i class="far
