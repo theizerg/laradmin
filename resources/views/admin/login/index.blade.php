@@ -7,9 +7,9 @@
 
 @section('content')
   <div class="col-md-12">
-    <div class="card">
-      <div class="card-header blue-gradient-dark text-white outline-primary ">
-        <h3 class="text-white">Listado de inicio de sesión</h3>
+    <div class="card card-primary">
+      <div class="card-header  ">
+        <h3 >Listado de inicio de sesión</h3>
        
       </div>
        <!-- /.card-header -->

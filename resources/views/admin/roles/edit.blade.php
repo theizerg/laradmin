@@ -5,7 +5,7 @@
 @section('page_subtitle', 'Editar')
 @section('content')
 
-  <section class="content">
+  <section class="container">
     <div class="row">
       <div class="col-md-6">
         <div class="btn-group">
@@ -22,9 +22,9 @@
     <br>
     <div class="row">
       <div class="col-md-12">
-        <div class="card">
-           <div class="card-header blue-gradient-dark text-white outline-primary ">
-              <h5 class=" text-white">Editar Role</h5>
+        <div class="card card-primary">
+           <div class="card-header">
+              <h5>Editar Role</h5>
              
             </div>
           <div class="card-body">
@@ -36,12 +36,7 @@
                 <label for="name">Nombre</label>
                 <input class="form-control" id="name" name="name" value="{{ $role->name }}" placeholder="Nombres">
                 <span class="missing_alert text-danger" id="name_alert"></span>
-              </div> 
-              <div class="form-group pading">
-                <label for="name">Ícono</label>
-                <input class="form-control" id="icon" name="icon" value="{{ $role->icon }}" placeholder="Nombres">
-                <span class="missing_alert text-danger" id="name_alert"></span>
-              </div>               
+              </div>           
               <br>
               <div class="form-group">
                 <label for="password">Contraseña actual ({{ Auth::user()->display_name }})</label>

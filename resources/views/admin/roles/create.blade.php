@@ -1,10 +1,9 @@
 @extends('layouts.admin')
 
 @section('title', 'Roles')
-@section('page_title', 'Roles')
-@section('page_subtitle', 'Ingresar')
+
 @section('content')
-<section class="container">
+<div class="container">
     <div class="row">
       <div class="col-md-6">
         <div class="btn-group">
@@ -20,9 +19,9 @@
     <br>
     <div class="row">
       <div class="col-md-12">
-        <div class="card">
-          <div class="card-header blue-gradient-dark text-white outline-primary ">
-              <h3 class=" text-white">Registrar nuevo Role</h3>
+        <div class="card card-primary">
+          <div class="card-header  ">
+              <h3>Registrar nuevo Role</h3>
              
             </div>
           <div class="card-body">
@@ -52,11 +51,7 @@
                 <input class="form-control" style="font-size: 15px;" id="name" name="name" placeholder="Nombres">
                 <span class="missing_alert text-danger" id="name_alert"></span>
               </div>
-              <div class="form-group pading">
-                <label class="font-weight-bolder" for="name">Ícono</label>
-                <input class="form-control" style="font-size: 15px;" id="icon" name="icon" placeholder="Nombres">
-                <span class="missing_alert text-danger" id="icon_alert"></span>
-              </div>
+              
              
             </div>
               <div class="card-footer">
@@ -70,7 +65,7 @@
 	     </div>
 	 </div>
 </div>
-</section>
+</div>
 
 @endsection
 @push('scripts')

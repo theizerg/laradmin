@@ -14,9 +14,9 @@
       <br>
       <div class="row">
       	<div class="col-md-12">
-          <div class="card">
-            <div class="card-header blue-gradient-dark text-white outline-primary ">
-              <h3 class=" text-white">Listado de usuarios</h3>
+          <div class="card card-primary">
+            <div class="card-header  ">
+              <h3>Listado de roles</h3>
              
             </div>
              <!-- /.card-header -->

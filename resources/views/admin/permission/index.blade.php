@@ -2,21 +2,14 @@
 
 @section('title', 'Permisos')
 @section('page_title', 'Permisos')
-@section('page_subtitle', 'Listado')
 
-@section('breadcrumb')
-    @parent
-    <li><a href="{{ url('/') }}"><i class="fa fa-dashboard"></i> Inicio</a></li>
-    <li><a href="{{ url('user') }}">usuarios</a></li>
-    <li class="active">permisos</li>
-@endsection
 
 @section('content')
 
-    <section class="content">
+    <section class="container">
       <div class="row">
         <div class="col-md-12">
-            <div class="card">
+            <div class="card card-primary">
               <div class="card-header">
                 <h2 class="font-weight-bold">Permisos del rol usuario</h2>
                 <div class="card-tools"></div>
@@ -140,13 +133,13 @@
                       
                    </tr>  
                   </table>
-                  <div class="box-footer clearfix"></div>
+                  <div class="card-footer clearfix"></div>
                    <div class="form-group pading">
                      <label for="name">Contraseña actual</label>
                      <input type="password" class="form-control" id="current_password" name="current_password" placeholder="Contraseña actual">
                      <span class="missing_alert text-danger" id="current_password_alert"></span>
                     </div>
-                    <button type="submit" class="btn btn-primary ajax" id="submit">
+                    <button type="submit" class="btn blue darken-4 text-white ajax" id="submit">
                       <i id="ajax-icon" class="fa fa-edit"></i> Editar
                     </button>
                   </div>

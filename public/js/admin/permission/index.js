@@ -29,12 +29,20 @@ $(document).ready(function(){
                   $('#main-form input, #main-form button').removeAttr('disabled');
                   $('#ajax-icon').removeClass('fa fa-spin fa-refresh').addClass('fa fa-edit');
                   $('#main-form #current_password').val('')
-                  toastr.success('Permisos actualizados exitosamente');
+                 toastr.success({
+                    title: '¡ÉXITO!',
+                    message: 'Los datos han sido modficados exitosamente.',
+                    position: 'topRight'
+                  });
                 }
               },error: function (data) {
                 var errors = data.responseJSON;
                 $.each( errors.errors, function( key, value ) {
-                  toastr.error(value);
+                   toastr.error({
+                    title: '¡ERROR!',
+                    message: (value),
+                    position: 'topRight'
+                  });
                   return false;
                 });
                 $('input').iCheck('enable');
