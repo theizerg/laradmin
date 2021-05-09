@@ -1,0 +1,43 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+
+$fa-font-path: "../webfonts";
+
+
+//Icheck
+@import "~icheck/skins/square/blue.css";
+
+//Font awesome
+@import '~@fortawesome/fontawesome-free/css/all.min.css';
+@import "~icheck/skins/square/blue.css";
+@import "~@dlghq/pace-progress/themes/blue/pace-theme-minimal.css";
+@import '~admin-lte/plugins/flag-icon-css/css/flag-icon.css';
+@import '~admin-lte/plugins/select2/css/select2.min.css';
+@import '~admin-lte/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css';
+@import "@mdi/font/scss/materialdesignicons.scss";
+
+// Bootstrap
+
+@import "~otika/assets/bundles/bootstrap-social/bootstrap-social.css";
+@import "~otika/assets/css/style.css";
+@import "~otika/assets/css/components.css";
+@import "~otika/assets/css/custom.css";
+@import "~otika/assets/bundles/datatables/datatables.min.css";
+@import "~otika/assets/bundles/datatables/DataTables-1.10.16/css/dataTables.bootstrap4.min.css";
+@import "~otika/pickadate/themes/default.css";
+@import "~otika/pickadate/themes/default.date.css";
+@import "~otika/fullcalendar/packages/core/main.css";
+@import "~otika/fullcalendar/packages/daygrid/main.css";
+@import "~otika/fullcalendar/packages/timegrid/main.css";
+@import "~otika/assets/bundles/izitoast/css/iziToast.min.css";
+
+
+
+
+
+
+
