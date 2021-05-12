@@ -5,7 +5,7 @@
 @section('page_subtitle', 'Editar')
 @section('content')
 
-  <section class="content">
+  <section class="container">
     <div class="row">
       <div class="col-md-6">
         <div class="btn-group">
@@ -49,6 +49,15 @@
                           <strong>{{ $message }}</strong>
                       </span>
                   @enderror
+              </div>
+               <div class="form-group">
+                <label class="font-weight-bolder" for="status">Género</label>
+                <div class="checkbox icheck">
+                  <label class="font-weight-bolder">
+                    <input type="radio" name="genero" value="M" checked> Masculino&nbsp;&nbsp;
+                    <input type="radio" name="genero" value="F"> Femenino
+                  </label>
+                </div>
               </div>
               <div class="form-group">
                 <label for="last_name">Usuario</label>

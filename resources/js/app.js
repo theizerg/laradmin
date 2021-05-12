@@ -17,7 +17,10 @@ window.toastr = require('otika/assets/bundles/izitoast/js/iziToast.min.js');
 
 
 /* iCheck */
+
 require('icheck');
+
+
 
 
 /* devbridge-autocomplete */
@@ -62,3 +65,4 @@ require('admin-lte/plugins/jsgrid/jsgrid.js');
 require('admin-lte/plugins/sweetalert2/sweetalert2.all.js');
 
 require('@iconify/iconify');
+

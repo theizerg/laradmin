@@ -23,14 +23,7 @@ class RolesAndPermissionsTableSeeder extends Seeder
                                 
                                 
                                 /* Asignar permisos */
-                                'AsignarPermisos',
-
-                                /* Asignar equipos */
-
-                                'VerAsignacionEquipos',
-                                'RegistrarAsignacionEquipos',
-                                'EditarAsignacionEquipos',
-                                'EliminarAsignacionEquipos',
+                                'AsignarPermisos',                              
                                
                                
                                 'VerPermisos',

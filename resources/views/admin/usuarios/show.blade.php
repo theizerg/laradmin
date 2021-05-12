@@ -6,7 +6,8 @@
 
 @section('content')
 
-<section class="card card-primary">
+<div class="container">
+<section class="content card card-primary">
 
     <div class="">
       <p class="text-white " style="font-size: 30px;">
@@ -66,13 +67,13 @@
     <div class="col-md-6">
       <div class="btn-group">
         @can('EditarUsuario')
-        <a href="{{ url('user', [$user->encode_id, 'edit']) }}" class="btn btn-primary"><i class="fa fa-edit"></i> Editar</a>
+        <a href="{{ url('user', [$user->encode_id, 'edit']) }}" class="btn blue darken-4 text-white"><i class="fa fa-edit"></i> Editar</a>
         @endcan
       </div>
     </div>
   </div>
     </div>
-  </div>
-</section>
 
+</section>
+</div>
 @endsection

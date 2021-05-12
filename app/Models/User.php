@@ -55,10 +55,10 @@ class User extends Authenticatable
     |
     */
 
-    public function getDisplayNameAttribute()
-    {
-        return trim(str_replace( '  ', ' ',  "{$this->name} {$this->lastname}")) ;
-    }
+     public function getDisplayNameAttribute()
+     {
+         return trim(str_replace( '  ', ' ',  "{$this->name} {$this->lastname}")) ;
+     }
 
 
     public function getDisplayStatusAttribute()
