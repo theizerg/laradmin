@@ -1,61 +1,93 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# Laradmin
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+**Laradmin** es mi “personal pre.built" desarrollado haciendo uso de **Laravel 7** y una plantilla **Personalizada** basada en Bootstrap 4,  para ser usada como base inicial en proyectos que necesitan el desarrollo de un panel de control o administrativo con gestión de usuarios con roles y permisos.
 
-## About Laravel
+El desarrollo  integra el sistema de autentificación por defecto de Laravel, y el uso del paquete spatie/laravel-permission cubriendo en la mayor medida:
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+- CRUD de usuarios
+- Asignación de roles
+- Asignación de permisos a roles
+- Habilitar/deshabilitar acceso al usuario
+- Recuperación de contraseña por correo electrónico
+- Registro y listado de ingresos y salidas del sistema (logins)
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+> La intención como  proyecto base es trabajar con los roles de administrador (con todos los permisos), y el de usuario normal (permisos asignados a este rol), la misma se puede modificar y /o ampliar según las necesidades del proyecto de manera manual, aprovechando los recursos que facilita el paquete **spatie/laravel-permission** para agregar mas roles de usuarios así como diversos permisos.
 
-## Learning Laravel
+---
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## Requerimientos
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+- [Composer](https://getcomposer.org/)
+- [Requerimientos de Laravel 5.5](https://laravel.com/docs/5.5/installation#installation)
+- [Node.js y NPM](https://nodejs.org/es/) (Opcional para trabajar y compilar  los assets con Laravel Mix)
 
-## Laravel Sponsors
+---
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+> Aviso **crear un virtual host** para este proyecto, **es necesario que el directorio public (como se aconseja) del framework funcione como la raíz**, o no funcionara la correcta lectura de las fuentes por parte de font awesome y otras librerias empleadas en este desarrollo.
 
-### Premium Partners
+## Instalación
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[OP.GG](https://op.gg)**
+```
+git clone https://github.com/theizerg/laradmin.git
+cd laradmin
+composer install
+```
 
-## Contributing
+Modificar el archivo **.env** con los datos correspondientes al proyecto, credenciales a la base de datos y envió de correo electrónico (recuperación de contraseña).
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Migrar a la base de datos los roles y permisos iniciales, así como el **usuario administrador por defecto**.
 
-## Code of Conduct
+```
+cd laradmin
+php artisan migrate --seed
+```
+Los datos del **usuario por defecto** podrán ser vistos (y modificados antes de migrar), en los archivos **seeds** del proyecto en **database/seeds**.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Enjoy!! :)
 
-## Security Vulnerabilities
+---
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## Paquetes y dependencias
 
-## License
+A continuación el listado de tecnologías y plugins utilizados en este desarrollo.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### Back-end
+- [Laravel 7](https://laravel.com/)
+- [spatie/laravel-permission 2.7](https://github.com/spatie/laravel-permission)
+- [nicolaslopezj/searchable 1.*](https://github.com/nicolaslopezj/searchable)
+- [vinkla/hashids 3.3](https://github.com/vinkla/laravel-hashids)
+- Entre otros más.
+
+### Front-end
+
+- [Bootstrap 4.4](https://getbootstrap.com/docs/4.4/)
+- [Jquery 3.2](https://jquery.com/)
+- [Font Awesome 4.7.0](http://fontawesome.io/)
+- [jQuery-Autocomplete 1.4.4](https://github.com/devbridge/jQuery-Autocomplete)
+- [toastr 2.1.2](http://codeseven.github.io/toastr/)
+- [iCheck 1.0.2](http://icheck.fronteed.com/)
+- [Pace 1.0.3](http://github.hubspot.com/pace/docs/welcome/)
+
+---
+
+## Front-end (Assets)
+
+Los [componentes y plugins](https://adminlte.io/docs/2.4/dependencies) utilizados por la plantilla Admin Lte, así como otras incorporadas fueron instalas haciendo uso de **NPM** y compiladas posteriormente con Laravel Mix (Webpack) en los archivos **public/css/app.css** y **public/js/app.js**.
+
+Si desea instalar nuevos plugins o agregar estilos personalizados o nuevos scripts javascript con este metodo, se necesita tener instalados **Node.js** con **NPM** establecer los plugins requeridos en el archivo **package.js** y modificar los archivos assets en **resources/assets** y posteriormente ejecutar:
+
+```
+cd laradmin
+npm install
+npm run dev o npm run prod
+```
+Para mayor información en el uso de **Laravel mix** visita la documentación en el [sitio de Laravel](https://laravel.com/docs/5.5/mix) y en el [repositorio del proyecto](https://github.com/JeffreyWay/laravel-mix).
+
+---
+
+#### Créditos
+
+Theizer González 
+Backend web developer  
+theizerg@gmail.com | [@theizerg_](https://instagram.com/theizerg_)
