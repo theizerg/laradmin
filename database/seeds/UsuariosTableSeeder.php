@@ -13,11 +13,11 @@ class UsuariosTableSeeder extends Seeder
     public function run()
     {
         $user = new User;
-        $user->name     = 'Theizer';
-        $user->username = 'tgonzalez';
+        $user->name     = 'Admin';
+        $user->username = 'laradmin';
         $user->genero   = 'M';
-        $user->lastname = 'Gonzalez';
-        $user->email    = 'tgonzalez@gmail.com';
+        $user->lastname = 'Administrador';
+        $user->email    = 'admin@mail.com';
         $user->password = 'admin';
         $user->status   = 1; // (1) active (0)disabled
         $user->save();
@@ -26,11 +26,11 @@ class UsuariosTableSeeder extends Seeder
 
 
          $user = new User;
-        $user->name     = 'Ada';
-        $user->username = 'atovar';
+        $user->name     = 'Usuario';
+        $user->username = 'larausuario';
         $user->genero   = 'F';
-        $user->lastname = 'Tovar';
-        $user->email    = 'adatov@gmail.com';
+        $user->lastname = 'Usuarios';
+        $user->email    = 'usuario@mail.com';
         $user->password = 'admin';
         $user->status   = 1; // (1) active (0)disabled
         $user->save();
