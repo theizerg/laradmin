@@ -10,7 +10,7 @@
     <title>@yield('title')</title>
     <!-- General CSS Files -->
     <!-- General CSS Files -->
-     <link rel="stylesheet" href="{{asset('otika/assets/css/app.min.css')}} " />
+     <link rel="stylesheet" href="{{asset('assets/css/app.min.css')}} " />
      <link rel="stylesheet" href="{{asset('css/app.css')}} " />
      <link rel="stylesheet" href="{{asset('css/system.css')}} " />
     @yield('styles')
@@ -62,14 +62,14 @@
                             </div>
                             <div class="dropdown-list-content dropdown-list-message">
                                 <a href="#" class="dropdown-item"> <span class="dropdown-item-avatar
-											text-white"> <img alt="image" src="{!!asset('otika/assets/img/users/user-1.png')!!}" class="rounded-circle">
+											text-white"> <img alt="image" src="{!!asset('assets/img/users/user-1.png')!!}" class="rounded-circle">
                                     </span> <span class="dropdown-item-desc"> <span class="message-user">John
                                             Deo</span>
                                         <span class="time messege-text">Please check your mail !!</span>
                                         <span class="time">2 Min Ago</span>
                                     </span>
                                 </a> <a href="#" class="dropdown-item"> <span class="dropdown-item-avatar text-white">
-                                        <img alt="image" src="{!!asset('otika/assets/img/users/user-2.png')!!}"
+                                        <img alt="image" src="{!!asset('assets/img/users/user-2.png')!!}"
                                             class="rounded-circle">
                                     </span> <span class="dropdown-item-desc"> <span class="message-user">Sarah
                                             Smith</span> <span class="time messege-text">Request for leave
@@ -77,14 +77,14 @@
                                         <span class="time">5 Min Ago</span>
                                     </span>
                                 </a> <a href="#" class="dropdown-item"> <span class="dropdown-item-avatar text-white">
-                                        <img alt="image" src="{!!asset('otika/assets/img/users/user-5.png')!!}"
+                                        <img alt="image" src="{!!asset('assets/img/users/user-5.png')!!}"
                                             class="rounded-circle">
                                     </span> <span class="dropdown-item-desc"> <span class="message-user">Jacob
                                             Ryan</span> <span class="time messege-text">Your payment invoice is
                                             generated.</span> <span class="time">12 Min Ago</span>
                                     </span>
                                 </a> <a href="#" class="dropdown-item"> <span class="dropdown-item-avatar text-white">
-                                        <img alt="image" src="{!!asset('otika/assets/img/users/user-4.png')!!}"
+                                        <img alt="image" src="{!!asset('assets/img/users/user-4.png')!!}"
                                             class="rounded-circle">
                                     </span> <span class="dropdown-item-desc"> <span class="message-user">Lina
                                             Smith</span> <span class="time messege-text">hii John, I have upload
@@ -93,7 +93,7 @@
                                             Min Ago</span>
                                     </span>
                                 </a> <a href="#" class="dropdown-item"> <span class="dropdown-item-avatar text-white">
-                                        <img alt="image" src="{!!asset('otika/assets/img/users/user-3.png')!!}"
+                                        <img alt="image" src="{!!asset('assets/img/users/user-3.png')!!}"
                                             class="rounded-circle">
                                     </span> <span class="dropdown-item-desc"> <span class="message-user">Jalpa
                                             Joshi</span> <span class="time messege-text">Please do as specify.
@@ -102,7 +102,7 @@
                                             Days Ago</span>
                                     </span>
                                 </a> <a href="#" class="dropdown-item"> <span class="dropdown-item-avatar text-white">
-                                        <img alt="image" src="{!!asset('otika/assets/img/users/user-2.png')!!}"
+                                        <img alt="image" src="{!!asset('assets/img/users/user-2.png')!!}"
                                             class="rounded-circle">
                                     </span> <span class="dropdown-item-desc"> <span class="message-user">Sarah
                                             Smith</span> <span class="time messege-text">Client Requirements</span>
@@ -157,8 +157,7 @@
                                 </a> <a href="#" class="dropdown-item"> <span
                                         class="dropdown-item-icon bg-info text-white"> <i class="fas
 												fa-bell"></i>
-                                    </span> <span class="dropdown-item-desc"> Welcome to Otika
-                                        template! <span class="time">Yesterday</span>
+                                    </span> <span class="dropdown-item-desc"> Welcome to                                         template! <span class="time">Yesterday</span>
                                     </span>
                                 </a>
                             </div>
@@ -169,7 +168,7 @@
                     </li>
                     <li class="dropdown"><a href="#" data-toggle="dropdown"
                             class="nav-link dropdown-toggle nav-link-lg nav-link-user"> <img alt="image"
-                                src="{!!asset('otika/assets/img/user.png')!!}" class="user-img-radious-style"> <span
+                                src="{!!asset('assets/img/user.png')!!}" class="user-img-radious-style"> <span
                                 class="d-sm-none d-lg-inline-block"></span></a>
                         <div class="dropdown-menu dropdown-menu-right pullDown">
                             <div class="dropdown-title">¡Hola! {{auth()->user()->display_name}} </div>
@@ -244,15 +243,15 @@
     </div>
     <!-- General JS Scripts -->
     
-  <script src="{{asset('otika/assets/js/app.min.js')}}"></script>
+  <script src="{{asset('assets/js/app.min.js')}}"></script>
   <!-- JS Libraies -->
   <script src="{{asset('js/app.js')}}"></script>
   <!-- Page Specific JS File -->
   <script src="{{asset('js/system.js')}}"></script>
   <!-- Template JS File -->
-  <script src="{{asset('otika/assets/js/scripts.js')}}"></script>
+  <script src="{{asset('assets/js/scripts.js')}}"></script>
   <!-- Custom JS File -->
-  <script src="{{asset('otika/assets/js/custom.js')}}"></script>
+  <script src="{{asset('assets/js/custom.js')}}"></script>
 
     @stack('scripts')
     <script>

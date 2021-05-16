@@ -13,7 +13,7 @@
     <title>Iniciar sesión</title>
     <!-- General CSS Files -->
 
-     <link rel="stylesheet" href="{{asset('otika/assets/css/app.min.css')}} " />
+     <link rel="stylesheet" href="{{asset('assets/css/app.min.css')}} " />
      <link rel="stylesheet" href="{{asset('css/app.css')}} " />
      <link rel="stylesheet" href="{{asset('css/system.css')}} " />
 
@@ -35,15 +35,15 @@
 
     <!-- General JS Scripts -->
     
-   <script src="{{asset('otika/assets/js/app.min.js')}}"></script>
+   <script src="{{asset('assets/js/app.min.js')}}"></script>
   <!-- JS Libraies -->
   <script src="{{asset('js/app.js')}}"></script>
   <!-- Page Specific JS File -->
   <script src="{{asset('js/system.js')}}"></script>
   <!-- Template JS File -->
-  <script src="{{asset('otika/assets/js/scripts.js')}}"></script>
+  <script src="{{asset('assets/js/scripts.js')}}"></script>
   <!-- Custom JS File -->
-  <script src="{{asset('otika/assets/js/custom.js')}}"></script>
+  <script src="{{asset('assets/js/custom.js')}}"></script>
    @stack('scripts')
    <style>
          #body{
