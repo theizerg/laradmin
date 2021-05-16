@@ -71,18 +71,6 @@ A continuación el listado de tecnologías y plugins utilizados en este desarrol
 
 ---
 
-## Front-end (Assets)
-
-Los [componentes y plugins](https://adminlte.io/docs/2.4/dependencies) utilizados por la plantilla Admin Lte, así como otras incorporadas fueron instalas haciendo uso de **NPM** y compiladas posteriormente con Laravel Mix (Webpack) en los archivos **public/css/app.css** y **public/js/app.js**.
-
-Si desea instalar nuevos plugins o agregar estilos personalizados o nuevos scripts javascript con este metodo, se necesita tener instalados **Node.js** con **NPM** establecer los plugins requeridos en el archivo **package.js** y modificar los archivos assets en **resources/assets** y posteriormente ejecutar:
-
-```
-cd laradmin
-npm install
-npm run dev o npm run prod
-```
-Para mayor información en el uso de **Laravel mix** visita la documentación en el [sitio de Laravel](https://laravel.com/docs/5.5/mix) y en el [repositorio del proyecto](https://github.com/JeffreyWay/laravel-mix).
 
 ---
 
