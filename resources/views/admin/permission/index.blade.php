@@ -6,20 +6,19 @@
 
 @section('content')
 
-    <section class="container">
+    <div class="container">
       <div class="row">
-        <div class="col-md-12">
-            <div class="card card-primary">
-              <div class="card-header">
+        <div class="col-sm-12">
+          <div class="card card-primary">
+            <div class="card-header">
                 <h2 class="font-weight-bold">Permisos del rol usuario</h2>
                 <div class="card-tools"></div>
               </div>
-              <div class="card-body ">
-                <form role="form" id="main-form">
-                  <input type="hidden" id="_url" value="{{ url('permission', ['user']) }}">
-                  <input type="hidden" id="_token" value="{{ csrf_token() }}">
-                  <table class="table table-responsive table-striped">
-                                   
+              <div class="card-body">
+               <form role="form" id="main-form">
+                <input type="hidden" id="_url" value="{{ url('permission', [$name]) }}">
+                <input type="hidden" id="_token" value="{{ csrf_token() }}">
+                 <table class="table table-responsive table-striped">            
                     <tr>
                       <td>
                         Ver usuarios<br>
@@ -130,11 +129,9 @@
                           </label>
                         </div>
                       </td>
-                      
                    </tr>  
                   </table>
-                  <div class="card-footer clearfix"></div>
-                   <div class="form-group pading">
+                  <div class="form-group pading">
                      <label for="name">Contraseña actual</label>
                      <input type="password" class="form-control" id="current_password" name="current_password" placeholder="Contraseña actual">
                      <span class="missing_alert text-danger" id="current_password_alert"></span>
@@ -142,13 +139,12 @@
                     <button type="submit" class="btn blue darken-4 text-white ajax" id="submit">
                       <i id="ajax-icon" class="fa fa-edit"></i> Editar
                     </button>
-                  </div>
-                </form>
+              </form>
             </div>
           </div>
-              
+        </div>  
       </div>
-    </section>
+    </div>
 
 
 @endsection

@@ -22,7 +22,7 @@
         <div class="col-md-12">
           <div class="card card-primary">
             <div class="card-header">
-              <h3 class=" text-white">Listado de usuarios</h3>
+              <h3 >Listado de usuarios</h3>
              
             </div>
              <!-- /.card-header -->

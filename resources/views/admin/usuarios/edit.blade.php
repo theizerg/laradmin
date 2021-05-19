@@ -121,6 +121,7 @@
               <div class="form-group">
                 <label for="password">Contraseña actual ({{ Auth::user()->display_name }})</label>
                  <input id="current_password" type="password" class="form-control @error('current_password') is-invalid @enderror"name="current_password" value="{{ old('current_password') }}"  autocomplete="current_password" autofocus placeholder="Contraseña">
+                 
                   @error('current_password')
                       <span class="invalid-feedback text-center" role="alert">
                           <strong>{{ $message }}</strong>

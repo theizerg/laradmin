@@ -33,22 +33,13 @@ $(document).ready(function(){
               success: function (response) {
                  if(response === 'authenticated.true'){
                    $('#ajax-icon').removeClass('fas fa-sign-in-alt').addClass('fas fa-spinner fa-pulse');
-                  toastr.success({
-                    title: '¡ÉXITO!',
-                    message: 'Usuario Logueado.',
-                    position: 'topRight'
-                  });
-                
+                   toastr.success('Usuario logueado exitosamente');
                    $(location).attr('href', $('#main-form #_redirect').val());
                   }
               },error: function (data) {
                 var errors = data.responseJSON;
                 $.each( errors.errors, function( key, value ) {
-                  toastr.error({
-                    title: '¡ERROR!',
-                    message:(value) ,
-                    position: 'topRight'
-                  });
+                  toastr.error(value);
                 
                 });
                 $('input').iCheck('enable');

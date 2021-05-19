@@ -1,114 +1,113 @@
 @extends('layouts.admin')
-
+@section('title', 'Inicio')
 @section('content')
 <section class="container">
-          <div class="row ">
-            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-xs-12">
-              <div class="card">
-                <div class="card-statistic-4">
-                  <div class="align-items-center justify-content-between">
-                    <div class="row ">
-                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-0 pt-3">
-                        <div class="card-content">
-                          <h5 class="font-15">Usuarios</h5>
-                          <h2 class="mb-3 font-18">{{App\Models\User::count()}}</h2>
-                          <p class="mb-0"><span class="col-green">10%</span> Increase</p>
+    @if ( Auth::user()->hasRole('Administrador'))
+      
+  
+  <div class="row">
+    <div class="col-sm-12">
+        <div class="card card-primary card-statistics">
+            <div class="row no-gutters">
+                <div class=" col-xxl-3 col-lg-6">
+                    <div class="p-20 border-lg-right border-bottom border-xxl-bottom-0">
+                        <div class="d-flex m-b-10">
+                            <p class="mb-0 font-regular text-muted font-weight-bold">Usuarios</p>
+                            <a class="mb-0 ml-auto font-weight-bold" href="#"><i class="ti ti-more-alt"></i> </a>
                         </div>
-                      </div>
-                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pl-0">
-                        <div class="banner-img">
-                          <i class="red-text mdi mdi-human-male fa-4x float-right"></i>
+                        <div class="d-block d-sm-flex h-100 align-items-center">
+                            <div class="apexchart-wrapper">
+                                <i class="fas fa-user-tie blue-text fa-5x"></i> 
+                            </div>
+                            <div class="statistics mt-3 mt-sm-0 ml-sm-auto text-center text-sm-right">
+                                <h3 class="mb-2 fa-3x mr-3"><i></i> {{ App\Models\User::count() }}</h3>
+                                <p>Cantidad actual de usuarios.</p>
+                            </div>
                         </div>
-                      </div>
                     </div>
-                  </div>
+                </div>
+                <div class="col-xxl-3 col-lg-6">
+                    <div class="p-20 border-xxl-right border-bottom border-xxl-bottom-0">
+                        <div class="d-flex m-b-10">
+                            <p class="mb-0 font-regular text-muted font-weight-bold">Roles</p>
+                            <a class="mb-0 ml-auto font-weight-bold" href="#"><i class="ti ti-more-alt"></i> </a>
+                        </div>
+                        <div class="d-block d-sm-flex h-100 align-items-center">
+                            <div class="apexchart-wrapper">
+                                <i class="fas fa-lock green-text fa-5x"></i>
+                            </div>
+                            <div class="statistics mt-3 mt-sm-0 ml-sm-auto text-center text-sm-right">
+                                <h3 class="mb-2 fa-3x mr-3"><i></i> {{Spatie\Permission\Models\Role::count()}}</h3>
+                                
+                                <p>Cantidad de roles en el sistema</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xxl-3 col-lg-6">
+                    <div class="p-20 border-lg-right border-bottom border-lg-bottom-0">
+                        <div class="d-flex m-b-10">
+                            <p class="mb-0 font-regular text-muted font-weight-bold">Permisos</p>
+                            <a class="mb-0 ml-auto font-weight-bold" href="#"><i class="ti ti-more-alt"></i> </a>
+                        </div>
+                        <div class="d-block d-sm-flex h-100 align-items-center">
+                            <div class="apexchart-wrapper">
+                                <i class="fas fa-user-lock purple-text fa-5x"></i>
+                            </div>
+                            <div class="statistics mt-3 mt-sm-0 ml-sm-auto text-center text-sm-right">
+                                <h3 class="mb-2 fa-3x mr-3"><i></i> {{Spatie\Permission\Models\Permission::count()}}</h3>
+                                
+                                <p>Cantidad de permisos en el sistema</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xxl-3 col-lg-6">
+                    <div class="p-20 border-lg-right border-bottom border-lg-bottom-0">
+                        <div class="d-flex m-b-10">
+                            <p class="mb-0 font-regular text-muted font-weight-bold">Historial</p>
+                            <a class="mb-0 ml-auto font-weight-bold" href="#"><i class="ti ti-more-alt"></i> </a>
+                        </div>
+                        <div class="d-block d-sm-flex h-100 align-items-center">
+                            <div class="apexchart-wrapper">
+                                <i class="fas fa-history orange-text fa-5x"></i>
+                            </div>
+                            <div class="statistics mt-3 mt-sm-0 ml-sm-auto text-center text-sm-right">
+                                <h3 class="mb-2 fa-3x mr-3"><i></i> {{App\Models\Log\LogSistema::count()}}</h3>
+                                
+                                <p>Histórico del sistema</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
               </div>
-            </div>
-            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-xs-12">
-              <div class="card">
-                <div class="card-statistic-4">
-                  <div class="align-items-center justify-content-between">
-                    <div class="row ">
-                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-0 pt-3">
-                        <div class="card-content">
-                          <h5 class="font-15"> Roles</h5>
-                          <h2 class="mb-3 font-18">{{Spatie\Permission\Models\Role::count()}}</h2>
-                          <p class="mb-0"><span class="col-orange">09%</span> Decrease</p>
-                        </div>
-                      </div>
-                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pl-0">
-                        <div class="banner-img">
-                          <i class="green-text  mdi mdi-lock fa-4x float-right"></i>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-xs-12">
-              <div class="card">
-                <div class="card-statistic-4">
-                  <div class="align-items-center justify-content-between">
-                    <div class="row ">
-                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-0 pt-3">
-                        <div class="card-content">
-                          <h5 class="font-15">Permisos</h5>
-                          <h2 class="mb-3 font-18">{{Spatie\Permission\Models\Permission::count()}}</h2>
-                          <p class="mb-0"><span class="col-green">18%</span>
-                            Increase</p>
-                        </div>
-                      </div>
-                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pl-0">
-                        <div class="banner-img">
-                          <i class="blue-text  float-right mdi mdi-lock-check-outline fa-4x"></i>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-xs-12">
-              <div class="card">
-                <div class="card-statistic-4">
-                  <div class="align-items-center justify-content-between">
-                    <div class="row ">
-                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-0 pt-3">
-                        <div class="card-content">
-                          <h5 class="font-15">Logs </h5>
-                          <h2 class="mb-3 font-18">{{App\Models\Log\LogSistema::count()}}</h2>
-                          <p class="mb-0"><span class="col-green">42%</span> Increase</p>
-                        </div>
-                      </div>
-                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pl-0">
-                        <div class="banner-img">
-                          <i class="purple-text mdi mdi-check-decagram fa-4x float-right"></i>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
-
-          <div class="card card-primary">
-            <div class="card-header">
-               <div class="card-body">
-                 <div class="container-fluid">
-                  <div class="card-panel">
-                  <canvas id="employee"></canvas>
-                   </div>
+      </div>
+    </div>
+      
+    <div class="card card-primary">
+        <div class="card-header">
+           <div class="card-body">
+             <div class="container-fluid">
+              <div class="card-panel">
+              <canvas id="employee"></canvas>
                </div>
            </div>
-        </div>
+       </div>
     </div>
+</div>
+@else 
+<div class="row">
+    
+</div>  
+@endif
 
-  </div>
+
+
+
 </section>
 @endsection
+ @if ( Auth::user()->hasRole('Administrador'))
 @push('scripts')
 
 {{-- Create the chart with javascript using canvas --}}
@@ -158,3 +157,6 @@
         });
     </script>
 @endpush
+@else
+
+@endif

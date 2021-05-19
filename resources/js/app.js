@@ -12,7 +12,8 @@ window.Pace = require('@dlghq/pace-progress');
 //require('admin-lte');
 
 /* toastr */
-window.toastr = require('otika/assets/bundles/izitoast/js/iziToast.min.js');
+window.toastr = require('toastr');
+toastr.options.preventDuplicates = true;
 
 
 

@@ -58,21 +58,13 @@ $(document).ready(function(){
                   $('#main-form #submit').hide();
                   $('#main-form #edit-button').attr('href', $('#main-form #_url').val() + '/' + json.user_id + '/edit');
                   $('#main-form #edit-button').removeClass('hide');
-                  toastr.success({
-                    title: '¡ÉXITO!',
-                    message: 'Los datos han sido guardados exitosamente.',
-                    position: 'topRight'
-                  });
+                  notifications.success('Usuario ingresado exitosamente');
                 }
               },error: function (data) {
                 var errors = data.responseJSON;
                 console.log(errors);
                 $.each( errors.errors, function( key, value ) {
-                  toastr.error({
-                    title: '¡ERROR!',
-                    message: (value),
-                    position: 'topRight'
-                  });
+                  notifications.error(value);
                   return false;
                 });
                 $('input').iCheck('enable');

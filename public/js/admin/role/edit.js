@@ -36,20 +36,12 @@ $(document).ready(function(){
                   $('#main-form input, #main-form button').removeAttr('disabled');
                   $('#main-form #password, #main-form #password_confirmation, #main-form #current_password').val('');
                   $('#ajax-icon').removeClass('fa fa-spin fa-refresh').addClass('fa fa-edit');
-                  toastr.success({
-                    title: '¡ÉXITO!',
-                    message: 'Los datos han sido ingresados exitosamente.',
-                    position: 'topRight'
-                  });
+                  toastr.success('Datos actualizados exitosamente');
                 }
               },error: function (data) {
                 var errors = data.responseJSON;
                 $.each( errors.errors, function( key, value ) {
-                  toastr.success({
-                    title: '¡ERROR!',
-                    message: (value),
-                    position: 'topRight'
-                  });
+                  toastr.error(value);
                   return false;
                 });
                 $('input').iCheck('enable');

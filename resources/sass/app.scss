@@ -1,9 +1,8 @@
+
+
+
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito');
-
-// Variables
-@import 'variables';
-
 
 $fa-font-path: "../webfonts";
 
@@ -13,19 +12,43 @@ $fa-font-path: "../webfonts";
 
 //Font awesome
 @import '~@fortawesome/fontawesome-free/css/all.min.css';
+
 @import "~icheck/skins/square/blue.css";
+
+
+@import "toastr/toastr.scss";
+
+// pace-progress
 @import "~@dlghq/pace-progress/themes/blue/pace-theme-minimal.css";
-@import '~admin-lte/plugins/flag-icon-css/css/flag-icon.css';
-@import '~admin-lte/plugins/select2/css/select2.min.css';
-@import '~admin-lte/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css';
+
+
+/* Datatables.net */
+@import "~datatables.net-bs4/css/dataTables.bootstrap4.min.css";
+
+
+/* Datatables.net buttons*/
+@import "~datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css";
+
+/* Datatables.net responsive*/
+@import "~datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css";
+
 @import "@mdi/font/scss/materialdesignicons.scss";
 
-// Bootstrap
+@import '~admin-lte/plugins/daterangepicker/daterangepicker.css';
+@import '~admin-lte/plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css';
+@import '~admin-lte/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css';
+@import '~admin-lte/plugins/select2/css/select2.min.css';
+@import '~admin-lte/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css';
+@import '~admin-lte/plugins/bootstrap4-duallistbox/bootstrap-duallistbox.min.css';
+@import '~admin-lte/plugins/summernote/summernote-bs4.css';
+@import '~admin-lte/plugins/ekko-lightbox/ekko-lightbox.css';
+@import '~admin-lte/plugins/flag-icon-css/css/flag-icon.css';
+@import '~admin-lte/plugins/ion-rangeslider/css/ion.rangeSlider.css';
+@import '~admin-lte/plugins/jsgrid/jsgrid-theme.css';
 
-@import "~otika/assets/bundles/bootstrap-social/bootstrap-social.css";
-@import "~otika/assets/css/style.css";
-@import "~otika/assets/css/components.css";
-@import "~otika/assets/css/custom.css";
+//
+
+
 @import "~otika/assets/bundles/datatables/datatables.min.css";
 @import "~otika/assets/bundles/datatables/DataTables-1.10.16/css/dataTables.bootstrap4.min.css";
 @import "~otika/pickadate/themes/default.css";
@@ -34,9 +57,6 @@ $fa-font-path: "../webfonts";
 @import "~otika/fullcalendar/packages/daygrid/main.css";
 @import "~otika/fullcalendar/packages/timegrid/main.css";
 @import "~otika/assets/bundles/izitoast/css/iziToast.min.css";
-
-
-
 
 
 

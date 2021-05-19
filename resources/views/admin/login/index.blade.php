@@ -1,5 +1,4 @@
 @extends('layouts.admin')
-
 @section('title', 'Usuarios')
 @section('page_title', 'Usuarios')
 
@@ -31,7 +30,7 @@
                 </a>
               </li>
             </ul><br>
-          <table id="example" class="table table-striped " style="width:100%">
+          <table id="example" class="table table-responsive">
               <thead>
               <tr>
               <th>#</th>

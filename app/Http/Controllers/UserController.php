@@ -56,7 +56,7 @@ class UserController extends Controller
 
 
 
-    public function store(StoreUser $request)
+    public function store(Request $request)
     {
         $user = User::create($request->except('role'));
 
@@ -110,9 +110,10 @@ class UserController extends Controller
 
 
 
-    public function update(UpdateUser $request, $id)
+    public function update(Request $request, $id)
     {
         $user = User::find(\Hashids::decode($id)[0]);
+        
         $user->update($request->except('role'));
 
         if ($request->has('role'))
