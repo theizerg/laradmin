@@ -112,12 +112,13 @@
 
 
         <!-- Main Footer -->
-        <footer class="main-footer">
-            <div class="float-right hidden-xs">
-            {{ env('APP_NAME') }}
-            </div>
-            <strong>Copyright &copy; 2020 <a href="#">{{ env('APP_NAME') }}</a>.</strong> All rights reserved.
-        </footer>
+       <footer class="main-footer">
+        <strong>Copyright &copy; 2021 <a target="_blank" href="https://instagram.com/theizerg_"> Theizer González</a> Desarrollador - Development.</strong>
+        Todos los derechos reservados.
+        <div class="float-right d-none d-sm-inline-block">
+         <img src="{{asset('images/vendor/admin-lte/plugins/flag-icon-css/flags/4x3/ve.svg')}}" alt="AdminLTE Logo" height="20" style="opacity: .8">
+        </div>
+       </footer>
 
         <!-- Control Sidebar -->
         <!-- Uncomment this line to activate the control right sidebar menu

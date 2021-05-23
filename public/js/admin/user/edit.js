@@ -63,24 +63,24 @@ $(document).ready(function(){
     		      type: 'PUT',
               cache: false,
     	        data: data,
-              success: function (response) {
+               success: function (response) {
                 var json = $.parseJSON(response);
                 if(json.success){
-                  $('input').iCheck('enable');
-                  $('#main-form input, #main-form button').removeAttr('disabled');
-                  $('#main-form #password, #main-form #password_confirmation, #main-form #current_password').val('');
-                  $('#ajax-icon').removeClass('fa fa-spin fa-refresh').addClass('fa fa-edit');
-                  notifications.success('Datos actualizados exitosamente');
+                  $('#main-form #submit').hide();
+                  $('#main-form #edit-button').attr('href', $('#main-form #_url').val() + '/' + json.user_id + '/edit');
+                  $('#main-form #edit-button').removeClass('hide');
+                  toastr.success('Datos modificados exitosamente');
                 }
               },error: function (data) {
                 var errors = data.responseJSON;
+                console.log(errors);
                 $.each( errors.errors, function( key, value ) {
-                  notifications.error(value);
+                  toastr.error(value);
                   return false;
                 });
                 $('input').iCheck('enable');
                 $('#main-form input, #main-form button').removeAttr('disabled');
-                $('#ajax-icon').removeClass('fa fa-spin fa-refresh').addClass('fa fa-edit');
+                $('#ajax-icon').removeClass('fa fa-spin fa-refresh').addClass('fa fa-save');
               }
            });
         });

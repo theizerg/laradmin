@@ -19,7 +19,7 @@ El desarrollo  integra el sistema de autentificación por defecto de Laravel, y 
 ## Requerimientos
 
 - [Composer](https://getcomposer.org/)
-- [Requerimientos de Laravel 5.5](https://laravel.com/docs/5.5/installation#installation)
+- [Requerimientos de Laravel 7](https://laravel.com/docs/7/installation#installation)
 - [Node.js y NPM](https://nodejs.org/es/) (Opcional para trabajar y compilar  los assets con Laravel Mix)
 
 ---
