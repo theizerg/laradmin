@@ -9,9 +9,9 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-12">
-          <div class="card card-primary">
+          <div class="card card-line-primary">
             <div class="card-header">
-                <h2 class="font-weight-bold">Permisos del rol usuario</h2>
+                <h5 class="font-weight-bold">Permisos del rol {{ $name }}</h5>
                 <div class="card-tools"></div>
               </div>
               <div class="card-body">

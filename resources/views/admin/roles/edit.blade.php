@@ -22,7 +22,7 @@
     <br>
     <div class="row">
       <div class="col-md-12">
-        <div class="card card-primary">
+        <div class="card card-line-primary">
            <div class="card-header">
               <h5>Editar Role</h5>
              

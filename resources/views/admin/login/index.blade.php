@@ -6,9 +6,9 @@
 
 @section('content')
   <div class="col-md-12">
-    <div class="card card-primary">
+    <div class="card card-line-primary">
       <div class="card-header  ">
-        <h3 >Listado de inicio de sesión</h3>
+        <h5 >Listado de inicio de sesión</h5>
        
       </div>
        <!-- /.card-header -->
@@ -30,7 +30,7 @@
                 </a>
               </li>
             </ul><br>
-          <table id="example" class="table table-responsive">
+          <table  class="display table table-striped table-responsive " style="width:100%">
               <thead>
               <tr>
               <th>#</th>

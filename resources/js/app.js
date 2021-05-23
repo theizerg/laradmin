@@ -1,8 +1,8 @@
 window.$ = window.jQuery = require('jquery');
 
-require('jquery.nicescroll');
+require('admin-lte');
 
-require('bootstrap/dist/js/bootstrap.js');
+
 
 /* pace-progress */
 window.Pace = require('@dlghq/pace-progress');
@@ -33,19 +33,14 @@ require('chart.js');
 /* Datatables.net responsive*/
 //require('@iconify/iconify');
 
-require( 'datatables.net-bs4' );
-require( 'datatables.net-buttons-bs4' );       
-require( 'datatables.net-buttons/js/buttons.html5.js' );
-require( 'datatables.net-buttons/js/buttons.print.js' );
-require( 'datatables.net-responsive-bs4' );
-
- // ### Datatables
+// ### Datatables
 window.JSZip = require( 'jszip' );
 
 // pdfMake
 var pdfMake = require('pdfmake/build/pdfmake.js');
 var pdfFonts = require('pdfmake/build/vfs_fonts.js');
-pdfMake.vfs = pdfFonts.pdfMake.vfs;
+pdfMake.vfs = pdfFonts.pdfMake.vf
+
 
 /* Chart js */
 require('admin-lte/plugins/select2/js/select2.full.min.js');
@@ -64,6 +59,19 @@ require('admin-lte/plugins/ion-rangeslider/js/ion.rangeSlider.js');
 require('admin-lte/plugins/jquery-mousewheel/jquery.mousewheel.js');
 require('admin-lte/plugins/jsgrid/jsgrid.js');
 require('admin-lte/plugins/sweetalert2/sweetalert2.all.js');
+require('admin-lte/plugins/datatables/jquery.dataTables.min.js');
+require('admin-lte/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js');
+require('admin-lte/plugins/datatables-responsive/js/dataTables.responsive.min.js');
+require('admin-lte/plugins/datatables-responsive/js/responsive.bootstrap4.min.js');
+require('admin-lte/plugins/datatables-buttons/js/dataTables.buttons.min.js');
+require('admin-lte/plugins/datatables-buttons/js/buttons.html5.min.js');
+require('admin-lte/plugins/datatables-buttons/js/buttons.print.min.js');
+require('admin-lte/plugins/datatables-buttons/js/buttons.colVis.min.js');
+
+
+
+
+
 
 require('@iconify/iconify');
 

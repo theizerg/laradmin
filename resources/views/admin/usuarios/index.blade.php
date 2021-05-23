@@ -20,9 +20,9 @@
       <br>
       
         <div class="col-md-12">
-          <div class="card card-primary">
+          <div class="card card-line-primary">
             <div class="card-header">
-              <h3 >Listado de usuarios</h3>
+              <h5 >Listado de usuarios</h5>
              
             </div>
              <!-- /.card-header -->
@@ -44,7 +44,7 @@
                       </a>
                     </li>
                   </ul><br>
-                <table id="example" class="table table-striped " style="width:100%">
+                <table  class="display table table-striped " style="width:100%">
                     <thead>
                     <tr>
                     <th>#</th>
@@ -93,6 +93,8 @@
                 <!-- /.card-body -->
             </div>
         </div>
+      </div>
+      
    
 
 

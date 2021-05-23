@@ -1,5 +1,5 @@
 $(document).ready(function() {
-   var table = $('#example').DataTable({
+   var table = $('.display').DataTable({
     language: {
         "decimal": "",
         "emptyTable": "No hay información",
@@ -25,5 +25,5 @@ $(document).ready(function() {
     });
 
     table.buttons().container()
-        .appendTo( '#example_wrapper .col-md-6:eq(0)' );
+        .appendTo( '.display_wrapper .col-md-6:eq(0)' );
 } );

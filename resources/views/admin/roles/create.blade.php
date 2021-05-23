@@ -19,9 +19,9 @@
     <br>
     <div class="row">
       <div class="col-md-12">
-        <div class="card card-primary">
+        <div class="card card-line-primary">
           <div class="card-header  ">
-              <h3>Registrar nuevo Role</h3>
+              <h5>Registrar nuevo Role</h5>
              
             </div>
           <div class="card-body">

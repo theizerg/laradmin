@@ -5,18 +5,7 @@ $(document).ready(function(){
 
         $('.missing_alert').css('display', 'none');
 
-        if ($('#main-form #username').val() === '') {
-            $('#main-form #username_alert').text('Ingrese el usuario').show();
-            $('#main-form #username').focus();
-            return false;
-        }
-
-
-        if ($('#main-form #password').val() === '') {
-            $('#main-form #password').focus();
-            $('#main-form #password_alert').text('Ingrese contraseña').show();
-            return false;
-        }
+        
 
         var data = $('#main-form').serialize();
         $('input').iCheck('disable');

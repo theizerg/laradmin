@@ -1,7 +1,11 @@
 
 
- .card.card-primary{
+ .card.card-line-primary{
   border-top:2px solid #6777ef
+ }
+
+ .px-sm-6{
+  padding-right: 3rem !important;
  }
  .btn-round 
  { 

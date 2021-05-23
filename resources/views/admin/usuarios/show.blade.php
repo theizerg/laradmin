@@ -7,14 +7,9 @@
 @section('content')
 
 <div class="container">
-<section class="content card card-primary">
+<section class="content card card-line-primary">
 
-    <div class="">
-      <p class="text-white " style="font-size: 30px;">
-         <i class="fa fa-user"></i> Datos de usuario
-        <small class="float-right" style="font-size: 25px;">{{ $user->display_name }}</small>
-      </p>
-    </div>
+   
     <div class="card-body">
   <div class="row invoice-info">
     <div class="col-sm-3 invoice-col">

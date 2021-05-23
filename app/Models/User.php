@@ -46,7 +46,7 @@ class User extends Authenticatable
 
     public function logins()
     {
-        return $this->hasMany('App\Models\Login');
+        return $this->hasMany('App\Models\Login','user_id');
     }
 
     /*

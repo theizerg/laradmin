@@ -1,131 +1,194 @@
 <!DOCTYPE html>
-<html> 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Laradmmin - @yield('title')</title>
-    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <meta name="robots" content="noindex, nofollow">
+    <html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>{{ env('APP_NAME') }} - @yield('title')</title>
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <meta name="robots" content="noindex, nofollow">
 
 
-    <!-- General CSS Files -->
-     <link rel="stylesheet" href="{{ asset('assets/css/vendors.css') }}">
-    <!-- endinject -->
-    <!-- Plugin css for this page -->
-    <!-- End plugin css for this page -->
-    <!-- Layout styles -->
-    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
-     <!-- End layout styles -->
-    <link rel="shortcut icon" href="{{ asset('assets/images/favicon.png') }}" />
-    <link rel="stylesheet" href="{{asset('css/plugins.css')}} " />
-     <link rel="stylesheet" href="{{asset('css/system.css')}} " />
-     @stack('styles')
-</head>
-<body>
-    <div class="app">
-        <!-- begin app-wrap -->
-        <div class="app-wrap">
-            <!-- begin pre-loader -->
-            <div class="loader">
-                <div class="h-100 d-flex justify-content-center">
-                    <div class="align-self-center">
-                        <img src="{{ asset('assets/img/loader/loader.svg') }}" alt="loader">
-                    </div>
-                </div>
+        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/system.css') }}">
+        <link rel="icon" href="{{ asset('images/logo/logo-imagen.png') }}">
+            <!-- Material Icons -->
+            <link rel="stylesheet" href="/assets/googlefonts/css/css.css">
+
+
+        @stack('styles')
+    </head>
+    <body class="hold-transition sidebar-mini layout-fixed">
+        <div class="wrapper" id="body">
+
+
+        <nav class="main-header navbar navbar-expand navbar-white navbar-light" id="sidebar">
+        <!-- Left navbar links -->
+        <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars text-white"></i></a>
+        </li>
+        <li class="nav-item d-none d-sm-inline-block">
+
+        </li>
+
+        @can('VerNotificaciones')
+      
+        @endcan
+        </ul>
+
+        <!-- SEARCH FORM -->
+        <form class="form-inline ml-3">
+        <div class="input-group input-group-sm">
+            <div class="input-group-append">
             </div>
+        </div>
+        </form>
 
-            <!-- end pre-loader -->
-            <!-- begin app-header -->
-            <header class="app-header top-bar">
-                <!-- begin navbar -->
-                <nav class="navbar navbar-expand-md">
+        <!-- Right navbar links -->
+        <ul class="navbar-nav ml-auto">
+        <!-- Notifications Dropdown Menu -->
+        <!-- Navbar Right Menu -->
+            <div class="navbar-custom-menu">
+                <ul class="nav navbar-nav">
+                <li class="dropdown user user-menu" >
+                   
+                    <ul class="dropdown-menu"  style="color:#ffff;">
+                    <li class="user-header" id="opciones">
+                       <!-- <img src="{{ asset('images/user/user1-128x128.jpg') }}" class="img-circle" alt="User Image">-->
+                        <i class="fa fa-user fa-5x" style="color:#fff;"></i>
+                        <p>
+                        {{ Auth::user()->display_name }}
+                        <br>
+                        {{ Auth::user()->hasrole('Administrador') ? 'Administrador' : 'Usuario' }}
 
-                    @include('layouts.partials.navbar')
-                </nav>
-                <!-- end navbar -->
-            </header>
-            <div class="app-container">
-                <aside class="app-navbar">
-                  @include('layouts.partials.leftmenu')
-               </aside>
+
+
+                        </p>
+                    </li>
+                    
+                    </ul>
+                </li>
+                <!-- Control Sidebar Toggle Button -->
+                <!-- Uncomment this line to activate the control right sidebar button
+                <li>
+                    <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
+                </li>
+                -->
+                </ul>
             </div>
-            <div class="app-main" id="main">
-                    <!-- begin container-fluid -->
-                    <div class="container-fluid">
-                        @yield('content')
-                    </div>
-                    <!-- end container-fluid -->
-              </div>
-         </div>
-         <footer class="footer">
-                <div class="row">
-                    <div class="col-12 col-sm-6 text-center text-sm-left">
-                        <p>&copy; Copyright 2019. All rights reserved.</p>
-                    </div>
-                   <div class="col  col-sm-6 ml-sm-auto text-center text-sm-right">
-                        <p><a target="_blank" href="https://www.templateshub.net"></a><img src="{{asset('images/vendor/admin-lte/plugins/flag-icon-css/flags/4x3/ve.svg')}}" height="30"></p>
-                    </div>
-                </div>
-            </footer>
-            <!-- end footer -->
-     </div>
-
-     
-    <!-- REQUIRED JS SCRIPTS -->
-    <!-- jQuery -->
-    <script src="{{asset('assets/js/vendors.js')}}"></script>
-    <script src="{{ asset('assets/js/app.js') }}"></script>
-    <script src="{{ asset('js/plugins.js') }}"></script>
-    <script src="{{ asset('js/system.js') }}"></script>
-    @stack('scripts')
-    <script>
+        </ul>
+    </nav>
+    <!-- /.navbar -->
 
 
-     @if(Session::has('message'))
-     var type = "{{ Session::get('alert-type', 'info') }}";
-     switch(type){
-         case 'info':
-             toastr.info("{{ Session::get('message') }}");
-             break;
+        <!-- Left side column. contains the logo and sidebar -->
+        <aside class="main-sidebar sidebar-dark-primary elevation-4" id="leftmenu">
+            @include('layouts.partials.leftmenu')
+        </aside>
 
-         case 'warning':
-             toastr.warning("{{ Session::get('message') }}");
-             break;
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <section class="content-header">
+            <h1 class="ml-3">
+                @yield('page_title')
+                <small>@yield('page_subtitle')</small>
+            </h1>
+            <ol class="breadcrumb float-sm-right">
 
-         case 'success':
-             toastr.success("{{ Session::get('message') }}");
-             break;
+                @show
+            </ol>
+            </section>
 
-         case 'error':
-             toastr.error("{{ Session::get('message') }}");
-             break;
-     }
- @endif
+
+
+            <!-- Main content -->
+            <section class="content container-fluid">
+            <!--Page Content Here -->
+            @yield('content')
+
+            </section>
+        </div>
+
+
+
+        <!-- Main Footer -->
+        <footer class="main-footer">
+            <div class="float-right hidden-xs">
+            {{ env('APP_NAME') }}
+            </div>
+            <strong>Copyright &copy; 2020 <a href="#">{{ env('APP_NAME') }}</a>.</strong> All rights reserved.
+        </footer>
+
+        <!-- Control Sidebar -->
+        <!-- Uncomment this line to activate the control right sidebar menu
+        @@include('layouts.partials.sidebar')
+        -->
+        </div>
+
+        <!-- REQUIRED JS SCRIPTS -->
+        <!-- jQuery -->
+        <script src="{{asset('js/app.js')}}"></script>
+        <script src="{{asset('js/system.js')}}"></script>
+       
+         <script>
+
+         @if(Session::has('message'))
+         var type = "{{ Session::get('alert-type', 'info') }}";
+         switch(type){
+             case 'info':
+                 toastr.info("{{ Session::get('message') }}");
+                 break;
+
+             case 'warning':
+                 toastr.warning("{{ Session::get('message') }}");
+                 break;
+
+             case 'success':
+                 toastr.success("{{ Session::get('message') }}");
+                 break;
+
+             case 'error':
+                 toastr.error("{{ Session::get('message') }}");
+                 break;
+         }
+     @endif
+     </script>
+     <script>
+     /** add active class and stay opened when selected */
+var url = window.location;
+
+// for sidebar menu entirely but not cover treeview
+    $('ul.nav-sidebar a').filter(function() {
+        return this.href == url;
+    }).addClass('active');
+
+    // for treeview
+    $('ul.nav-treeview a').filter(function() {
+        return this.href == url;
+    }).parentsUntil(".nav-link > .nav-treeview").addClass('active menu-open').prev('a').addClass('active');
+
+   
  </script>
-    @stack('scripts')
+        @stack('scripts')
 
-    <style>
+        <style>
 
-    #sidebar{
-
-
-            
-            }
+        #sidebar{
 
 
-    #opciones{
-
-                background: #0313f1;
-
-
-            }
+                background:linear-gradient(to left,#0285D0,#0073AF,#004876);
+                }
 
 
-    </style>
+        #opciones{
 
-    @can('VerNotificaciones')
+                    background: #b71c1c;
 
 
-@endcan
-</body>
+                }
+
+
+        </style>
+
+    </body>
 </html>
